@@ -20,8 +20,8 @@
                    class="form-control"
                    id="temps"
                    name="temps"
-                   value=""
-                   placeholder="Saisissez le temps en seconde">
+                   value="<?= (isset($_POST["temps"])) ? $_POST["temps"] : null ?>"
+                   placeholder="temps en seconde">
         </div>
         <span>
                 <button type="submit">Valider</button>
@@ -29,6 +29,12 @@
     </form>
 </div>
 
+
+<?php if (isset($distanceOrage)) :?>
+
+    <h2>L'orage se trouve à une distance de : <?=$distanceOrage?> km</h2>
+
+<?php endif; ?>
 
 
 
